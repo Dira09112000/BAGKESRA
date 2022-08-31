@@ -1,0 +1,56 @@
+:root{
+    --marquee-color :black;
+    --marquee-background :orange;
+}
+
+marquee{
+    display: flex;
+    background: var(--marquee-background);
+    color: var(--marquee-color);
+    height: 40px;
+    align-items: center;
+}
+
+.wraper-list-kategori{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.list-kategori{
+    display: flex;
+    width:  200px ;
+    height: 50px;
+    background: grey;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.list-kategori:hover{
+    background: orange;
+    color: white;
+}
+.bg-news{
+    background: #f3f3f3;
+}
+
+h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+

@@ -1,0 +1,32 @@
+.all{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sub{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.nav{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.lampung-timur{
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.hover-navbar{
+    border-radius: 20px;
+}
+.hover-navbar:hover{
+    background: orange;
+    border-radius: 20px;
+}

@@ -1,0 +1,29 @@
+.all-footer{
+    width: 100%;
+    height: 100%;
+    background: orange;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tentang-kami{
+    padding: 10px;
+    color: black;
+    width: 50%;
+    text-align: justify;
+}
+.kontak-kami{
+   display: flex;
+   padding: 10px;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+}
+
+h5{
+    text-align: center;
+}
