@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "../css/Home.css";
+import { categoryListArticle } from "../util/Api";
 const ListKategoriArtikel = () => {
   const [GetData, SetData] = useState(null);
   useEffect(() => {
@@ -13,7 +14,7 @@ const ListKategoriArtikel = () => {
   function getList() {
     const axios = require("axios");
     axios
-      .get("http://adminmesuji.embuncode.com/api/article/categories/8")
+      .get(categoryListArticle)
       .then(function (response) {
         SetData(response.data.data);
       })

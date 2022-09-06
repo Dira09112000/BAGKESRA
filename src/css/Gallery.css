@@ -1,0 +1,22 @@
+/* FOTO */
+.wrapper-poto{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-poto{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px green
+}
+
+/* END FOTO */
+
+
+/* VIDEO */
+
+
+/* END VIDEO */

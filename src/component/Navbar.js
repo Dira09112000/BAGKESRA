@@ -23,8 +23,8 @@ const Navigationbar = () => {
                   </Link>
                 </div>
                 <div style={{paddingLeft:"20px", fontWeight:"500"}}>
-                  <div>Lampung Timur</div>
-                  <div>Bagian Kesejahteraan</div>
+                  <div>Tulang Bawang</div>
+                  <div>Bagian Kesejahteraan Rakyat</div>
                 </div>
               </div>
             </Navbar.Brand>
@@ -35,14 +35,14 @@ const Navigationbar = () => {
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/" className="hover-navbar">Beranda</Nav.Link>
                   <Nav.Link as={Link} to="/News" className="hover-navbar">Berita</Nav.Link>
-                  <Nav.Link className="hover-navbar">Artikel</Nav.Link>
-                  <Nav.Link className="hover-navbar">Dokumen</Nav.Link>
+                  <Nav.Link as={Link} to="/Article" className="hover-navbar">Artikel</Nav.Link>
+                  <Nav.Link as={Link} to="/Document" className="hover-navbar">Dokumen</Nav.Link>
                   <NavDropdown className="hover-navbar" title="Galeri" id="basic-nav-dropdown">
-                    <NavDropdown.Item to="">Foto</NavDropdown.Item>
-                    <NavDropdown.Item to="">Video</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/GalleryPhoto">Foto</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/GalleryVideo">Video</NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link className="hover-navbar">Statis</Nav.Link>
-                </Nav>
+                  <Nav.Link as={Link} to="/StaticPage" className="hover-navbar">Statis</Nav.Link>
+                </Nav> 
               </Navbar.Collapse>
             </div>
           </div>

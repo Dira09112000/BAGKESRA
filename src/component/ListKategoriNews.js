@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "../css/Home.css";
+import { categoryListArticle, categoryListNews } from "../util/Api";
 const ListKategoriNews = () => {
   const [GetData, SetData] = useState(null);
   useEffect(() => {
@@ -13,9 +14,10 @@ const ListKategoriNews = () => {
   function getList() {
     const axios = require("axios");
     axios
-      .get("http://adminmesuji.embuncode.com/api/news/categories/8")
+      .get(categoryListNews)
       .then(function (response) {
         SetData(response.data.data);
+        console.log(response.data.data);
       })
       .catch(function (error) {})
       .then(function () {});
@@ -26,7 +28,11 @@ const ListKategoriNews = () => {
         <div className="wraper-list-kategori">
           {GetData &&
             GetData.map((item, index) => {
-              return <div className="list-kategori">{item.nama_kategori}</div>;
+              return (
+                <a href={`/KategoriNews/${item.slug}`}>
+                  <div className="list-kategori">{item.nama_kategori}</div>
+                </a>
+              );
             })}
         </div>
       ) : (

@@ -4,10 +4,9 @@ import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import "../css/News.css";
 import Footer from "../component/Footer";
-import { newsList } from "../util/Api";
-import ListKategoriNews from "../component/ListKategoriNews";
+import { articleList } from "../util/Api";
 import Loader from "../component/Loader";
-const PageNews = () => {
+const PageArticle = () => {
   const [GetData, SetData] = useState(null);
   useEffect(() => {
     getNews();
@@ -18,7 +17,7 @@ const PageNews = () => {
   function getNews() {
     const axios = require("axios");
     axios
-      .get(newsList)
+      .get(articleList)
       .then(function (response) {
         SetData(response.data.data.data);
       })
@@ -45,13 +44,13 @@ const PageNews = () => {
                   width: "50rem",
                 }}
               >
-                BERITA
+                ARTIKEL
               </h2>
               {GetData &&
                 GetData.map((item, index) => {
                   return (
                     <a
-                      href={`/DetailBerita/${item.id}`}
+                      href={`/DetailArtikel/${item.id}`}
                       style={{ width: "50rem" }}
                     >
                       <div className="card-page-news">
@@ -63,7 +62,7 @@ const PageNews = () => {
                           <div className="title-page-news">{item.title}</div>
                           <p>{item.intro}</p>
                           <a
-                            href={`/DetailNews/${item.id}`}
+                            href={`/DetailArticle/${item.id}`}
                             style={{
                               display: "flex",
                             }}
@@ -88,4 +87,4 @@ const PageNews = () => {
   );
 };
 
-export default PageNews;
+export default PageArticle;
