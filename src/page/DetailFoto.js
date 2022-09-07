@@ -25,13 +25,6 @@ const DetailFoto = () => {
   }
   return (
     <>
-      <marquee behavior="" direction="">
-        Tulang Bawang
-      </marquee>
-      <div>
-        <Navigationbar />
-      </div>
-
       {DataResponse == null ? (
         <Loader />
       ) : DataResponse != null ? (

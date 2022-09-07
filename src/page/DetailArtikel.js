@@ -1,12 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { detailArticle, detailNews } from "../util/Api";
-import Navigationbar from "../component/Navbar";
+import { detailArticle } from "../util/Api";
 import { Container } from "react-bootstrap";
 import "../css/News.css";
-import Footer from "../component/Footer";
-import ListKategoriNews from "../component/ListKategoriNews";
 import Loader from "../component/Loader";
 const DetailArtikel = () => {
   const [DataShowArtikel, setDataShowArtikel] = useState([]);
@@ -22,7 +19,6 @@ const DetailArtikel = () => {
       .get(detailArticle + id)
       .then(function (response) {
         setDataShowArtikel(response.data.data);
-        console.log(response.data);
       })
       .catch(function (error) {})
       .then(function () {});
@@ -30,11 +26,6 @@ const DetailArtikel = () => {
 
   return (
     <>
-      <marquee>Tulang Bawang</marquee>
-      <div>
-        <Navigationbar />
-      </div>
-
       <Container>
         {DataShowArtikel == null ? (
           <Loader />
@@ -65,17 +56,14 @@ const DetailArtikel = () => {
                     borderBottom: "solid 3px",
                   }}
                 >
-                  KATEGORI ARTIKEL
+                  BERITA LAINYA
                 </div>
-                <div>
-                  <ListKategoriNews />
-                </div>
+                <div></div>
               </div>
             )}
           </div>
         )}
       </Container>
-      <Footer />
     </>
   );
 };

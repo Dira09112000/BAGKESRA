@@ -27,18 +27,12 @@ const PagePhoto = () => {
   console.log(DataResponse);
   return (
     <>
-      <marquee behavior="" direction="">
-        Tulang Bawang
-      </marquee>
-      <div>
-        <Navigationbar />
-      </div>
+    <div style={{paddingBottom:"100px"}}>
       {DataResponse == null ? (
         <Loader />
       ) : DataResponse != null ? (
         <Container>
           <h2 style={{ paddingTop: "20px" }}>GALLERY PHOTO</h2>
-
           <div className="wrapper-poto">
             {DataResponse &&
               DataResponse.map((index) => {
@@ -58,6 +52,7 @@ const PagePhoto = () => {
       ) : (
         ""
       )}
+      </div>
     </>
   );
 };

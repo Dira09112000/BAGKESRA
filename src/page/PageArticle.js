@@ -26,10 +26,6 @@ const PageArticle = () => {
   }
   return (
     <>
-      <marquee>Tulang Bawang</marquee>
-      <div>
-        <NavigationBar />
-      </div>
       <Container>
         <div className="flex">
           {GetData == null ? (
@@ -76,13 +72,10 @@ const PageArticle = () => {
                 })}
             </div>
           ) : (
-            ""
+          ""
           )}
         </div>
       </Container>
-      <div>
-        <Footer />
-      </div>
     </>
   );
 };

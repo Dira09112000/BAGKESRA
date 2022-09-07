@@ -11,9 +11,36 @@ import DetailFoto from "./DetailFoto";
 import DetailBerita from "./DetailBerita";
 import DetailArtikel from "./DetailArtikel";
 import Beranda from "./Beranda";
-const RouterApp = () => {
+import Navigationbar from "../component/Navbar";
+import Footer from "../component/Footer";
+import { useState } from "react";
+import { useEffect } from "react";
+import { instansi } from "../util/Api";
+const App = () => {
+  const [infoInstansi, setInstansi] = useState([]);
+
+  useEffect(() => {
+    getInstansi();
+  },[]);
+
+  function getInstansi() {
+    const axios = require("axios");
+    axios
+      .get(instansi)
+      .then(function (response) {
+        setInstansi(response.data.data);
+        console.log(response.data.data)
+      })
+      .catch(function (error) {})
+      .then(function () {});
+  }
+
   return (
     <>
+      <marquee behavior="" direction="">
+        {infoInstansi.tentang}
+      </marquee>
+      <Navigationbar />
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/News" element={<PageNews />} />
@@ -27,8 +54,9 @@ const RouterApp = () => {
         <Route path="/DetailBerita/:id" element={<DetailBerita />} />
         <Route path="/DetailArtikel/:id" element={<DetailArtikel />} />
       </Routes>
+      <Footer />
     </>
   );
 };
 
-export default RouterApp;
+export default App;

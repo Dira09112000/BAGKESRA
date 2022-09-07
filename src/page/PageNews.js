@@ -27,10 +27,6 @@ const PageNews = () => {
   }
   return (
     <>
-      <marquee>Tulang Bawang</marquee>
-      <div>
-        <NavigationBar />
-      </div>
       <Container>
         <div className="flex">
           {GetData == null ? (
@@ -77,13 +73,10 @@ const PageNews = () => {
                 })}
             </div>
           ) : (
-            ""
+            <div>wkwkwk</div>
           )}
         </div>
       </Container>
-      <div>
-        <Footer />
-      </div>
     </>
   );
 };

@@ -28,13 +28,6 @@ const DetailDocument = () => {
 
   return (
     <>
-      <marquee behavior="" direction="">
-        Lampung Timur
-      </marquee>
-      <div>
-        <Navigationbar />
-      </div>
-
       {GetDokumen == null ? (
         <Loader />
       ) : GetDokumen != null ? (
@@ -59,9 +52,7 @@ const DetailDocument = () => {
       ) : (
         ""
       )}
-      <div style={{paddingTop:"50px"}}>
-        <Footer />
-      </div>
+      
     </>
   );
 };

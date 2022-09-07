@@ -21,9 +21,6 @@ const Footer = () => {
       .catch(function (error) {})
       .then(function () {});
   }
-
-  console.log(Instansi)
-
   return (
     <>
       <div className="all-footer">

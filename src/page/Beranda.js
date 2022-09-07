@@ -56,11 +56,6 @@ const Beranda = () => {
 
   return (
     <>
-      <marquee>Website Tulang Bawang</marquee>
-      <div>
-        <Navigationbar />
-      </div>
-
       {Berita == null || Artikel == null || Banner == null ? (
         <Loader />
       ) : Banner != null ? (
@@ -140,7 +135,6 @@ const Beranda = () => {
       ) : (
         ""
       )}
-      <div><Footer/></div>
     </>
   );
 };

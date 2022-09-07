@@ -25,32 +25,27 @@ const PageVideo = () => {
 
   return (
     <>
-      <marquee behavior="" direction="">
-        Tulang Bawang
-      </marquee>
-      <div>
-        <Navigationbar />
+      <div style={{paddingBottom:"430px"}}>
+        {Video == null ? (
+          <Loader />
+        ) : Video != null ? (
+          <Container>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                height: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <h2>TIDAK ADA VIDEO</h2>
+            </div>
+          </Container>
+        ) : (
+          ""
+        )}
       </div>
-
-      {Video == null ? (
-        <Loader />
-      ) : Video != null ? (
-        <Container>
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h2>TIDAK ADA VIDEO</h2>
-          </div>
-        </Container>
-      ) : (
-        ""
-      )}
     </>
   );
 };

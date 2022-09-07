@@ -22,18 +22,13 @@ const DetailBerita = () => {
       .get(detailNews + id)
       .then(function (response) {
         setDataShowBerita(response.data.data);
-        console.log(response.data);
       })
       .catch(function (error) {})
       .then(function () {});
   }
-console.log(DataShowBerita)
+  console.log(DataShowBerita);
   return (
     <>
-      <marquee>Tulang Bawang</marquee>
-      <div>
-        <Navigationbar />
-      </div>
       {DataShowBerita == null ? (
         <Loader />
       ) : DataShowBerita != null ? (
@@ -62,10 +57,10 @@ console.log(DataShowBerita)
                   borderBottom: "solid 3px",
                 }}
               >
-                KATEGORI BERITA
+                BERITA LAINYA
               </div>
               <div>
-                <ListKategoriNews />
+                
               </div>
             </div>
           </div>
@@ -73,7 +68,7 @@ console.log(DataShowBerita)
       ) : (
         ""
       )}
-      <Footer />
+
     </>
   );
 };
