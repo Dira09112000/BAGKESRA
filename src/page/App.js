@@ -29,7 +29,6 @@ const App = () => {
       .get(instansi)
       .then(function (response) {
         setInstansi(response.data.data);
-        console.log(response.data.data)
       })
       .catch(function (error) {})
       .then(function () {});
